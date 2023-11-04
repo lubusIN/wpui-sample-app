@@ -2,7 +2,22 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/app.css ***!
   \*****************************************************************************************************************************************************************/
 /* 
-Custom Styles 
+ Custom App Styles 
 */
+body {
+    font-family: inter;
+}
+
+/* TODO: Remove placeholder styles */
+.placeholder-styles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    opacity: 0.8;
+    background-image: radial-gradient(#6b6b6b 0.5px, #f4f4f4 0.5px);
+    background-size: 10px 10px;
+}
 
 /*# sourceMappingURL=index.css.map*/

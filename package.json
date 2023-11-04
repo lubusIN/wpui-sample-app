@@ -4,7 +4,6 @@
   "description": "Sample standalone app using wpui",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "wp-scripts build --webpack-no-externals",
     "check-engines": "wp-scripts check-engines",
     "check-licenses": "wp-scripts check-licenses",
@@ -14,19 +13,23 @@
     "lint:md:docs": "wp-scripts lint-md-docs",
     "lint:pkg-json": "wp-scripts lint-pkg-json",
     "packages-update": "wp-scripts packages-update",
-    "plugin-zip": "wp-scripts plugin-zip",
     "start": "wp-scripts start --webpack-no-externals",
     "serve": "serve",
+    "dev": "concurrently --kill-others npm:start npm:serve",
     "test:e2e": "wp-scripts test-e2e",
     "test:unit": "wp-scripts test-unit-js"
   },
-  "author": "",
+  "author": "lubus",
   "license": "ISC",
   "dependencies": {
     "@wordpress/components": "^25.10.0",
     "@wordpress/compose": "^6.21.0",
     "@wordpress/element": "^5.21.0",
-    "@wordpress/icons": "^9.35.0",
-    "@wordpress/scripts": "^26.15.0"
+    "@wordpress/icons": "^9.35.0"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^26.16.0",
+    "concurrently": "^8.2.2",
+    "serve": "^14.2.1"
   }
 }

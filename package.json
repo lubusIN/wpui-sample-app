@@ -14,6 +14,8 @@
     "lint:pkg-json": "wp-scripts lint-pkg-json",
     "packages-update": "wp-scripts packages-update",
     "start": "wp-scripts start --webpack-no-externals",
+    "serve": "serve",
+    "dev": "concurrently --kill-others npm:start npm:serve",
     "test:e2e": "wp-scripts test-e2e",
     "test:unit": "wp-scripts test-unit-js"
   },
@@ -26,6 +28,8 @@
     "@wordpress/icons": "^9.35.0"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^26.16.0"
+    "@wordpress/scripts": "^26.16.0",
+    "concurrently": "^8.2.2",
+    "serve": "^14.2.1"
   }
 }
